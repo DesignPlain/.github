@@ -24,8 +24,12 @@ DesignSphere
 - [ ] Code snippet suggestions for communication between connected resources
 - [ ] Supported all Pulumi resources
 - [ ] UI suggestion for different resource best practices
+- [ ] Plugin model to add other custom resources
 
-## Design and Architecture
+## Design & Architecture
 * DesignSphere UI is built on Angular and uses Angular drag-and-drop CDK for the drag functionality for the UI canvas.
 * Backend uses [Pulumi](https://www.pulumi.com) for deploying resources and is written in Golang. For data persistence, we use [Pebble](https://github.com/cockroachdb/pebble) KV database.
-* Programmatic structures and classes required for configuring and deploying the cloud resource are separately auto-generated from the Pulumi resource schemas (eg: [pulumi-aws resource schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/cmd/pulumi-resource-aws/schema.json)) and used in the backend code.
+* Programmatic structures required for configuring and deploying the cloud resource are separately auto-generated from the Pulumi resource schemas
+  * Example resource schema - [pulumi-aws resource schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/cmd/pulumi-resource-aws/schema.json)
+  * The codegen generates code for both UI typescript and backend go constructs.
+  * Generated code is used in rendering resource config properties in the UI and parsing the resource configs received at the backend APIs on config changes and deployment from the UI.
