@@ -31,5 +31,5 @@ DesignSphere
 * Backend uses [Pulumi](https://www.pulumi.com) for deploying resources and is written in Golang. For data persistence, we use [Pebble](https://github.com/cockroachdb/pebble) KV database.
 * Programmatic structures required for configuring and deploying the cloud resource are separately auto-generated from the Pulumi resource schemas
   * Example resource schema - [pulumi-aws resource schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/cmd/pulumi-resource-aws/schema.json)
-  * The codegen generates code for both UI typescript and backend go constructs.
+  * The code generator generates code for UI typescript and backend go constructs.
   * Generated code is used in rendering resource config properties in the UI and parsing the resource configs received at the backend APIs on config changes and deployment from the UI.
