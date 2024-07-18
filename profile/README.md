@@ -19,8 +19,8 @@ DesignSphere
 - [x] Deploy AWS resources
 - [ ] Deploy Azure resources
 - [x] UI for configuring individual resources
-- [ ] UI to list deployed resources with related properties
-- [ ] UI for error messages and potential fixes
+- [x] UI to list deployed resources with related properties
+- [x] UI for error messages and potential fixes
 - [ ] Code snippet suggestions for communication between connected resources
 - [ ] Supported all Pulumi resources
 - [ ] UI suggestion for different resource best practices
